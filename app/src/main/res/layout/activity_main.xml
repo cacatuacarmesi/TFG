@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:keepScreenOn="true"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph"
+            tools:context=".MainActivity" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/toolbar_background"
+            app:contentInsetStart="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/tfl_logo"
+                    app:layout_constraintEnd_toStartOf="@id/tvHelper"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvHelper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/fr_camera_toolbar_icon_padding"
+                    android:paddingEnd="@dimen/fr_camera_toolbar_icon_padding"
+                    android:text="@string/tv_icon_helper"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fr_camera_helper_icon_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/imgSetting"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpUsage" />
+
+                <ImageView
+                    android:id="@+id/imgSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:contentDescription="@null"
+                    android:paddingStart="@dimen/fr_camera_toolbar_icon_padding"
+                    android:paddingEnd="@dimen/fr_camera_toolbar_icon_padding"
+                    android:src="@drawable/ic_baseline_settings"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
