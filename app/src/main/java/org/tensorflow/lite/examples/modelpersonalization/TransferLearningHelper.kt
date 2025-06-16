@@ -49,7 +49,7 @@ class TransferLearningHelper(
             targetWidth = interpreter!!.getInputTensor(0).shape()[2]
             targetHeight = interpreter!!.getInputTensor(0).shape()[1]
         } else {
-            classifierListener?.onError("TFLite failed to init.")
+            classifierListener?.onError("TFG falla al iniciar.")
         }
     }
 
@@ -72,10 +72,9 @@ class TransferLearningHelper(
             true
         } catch (e: IOException) {
             classifierListener?.onError(
-                "Model personalization failed to " +
-                        "initialize. See error logs for details"
+                " "
             )
-            Log.e(TAG, "TFLite failed to load model with error: " + e.message)
+            Log.e(TAG, "Error al cargar el modelo: " + e.message)
             false
         }
     }

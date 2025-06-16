@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
                 )
             } else {
                 Toast.makeText(
-                    this, "Change the setting only available in " +
-                            "training mode", Toast.LENGTH_LONG
+                    this, "Cambiar los ajustes solo disponible en  " +
+                            "entrenamiento", Toast.LENGTH_LONG
                 ).show()
             }
         }
