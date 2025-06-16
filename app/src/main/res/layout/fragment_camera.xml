@@ -137,7 +137,7 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toStartOf="@id/llClassFour"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_weight="1"
                 app:layout_constraintStart_toEndOf="@id/llClassTwo"
                 app:layout_constraintTop_toTopOf="parent"
@@ -156,33 +156,8 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-           <LinearLayout
-                android:id="@+id/llClassFour"
-                style="@style/ClassButton"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@id/llClassThree"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_class_four"
-                    android:textSize="@dimen/fr_camera_tv_classes_text_size"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvNumberClassFour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <LinearLayout
             android:id="@+id/btnStartTrain"
