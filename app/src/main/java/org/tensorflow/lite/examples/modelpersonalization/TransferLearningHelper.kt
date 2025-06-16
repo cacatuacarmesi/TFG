@@ -236,6 +236,8 @@ class TransferLearningHelper(
         return bottleneck[0]
     }
 
+
+
     // Preprocess the image and convert it into a TensorImage for classification.
     private fun processInputImage(
         image: Bitmap,

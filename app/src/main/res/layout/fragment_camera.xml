@@ -156,7 +156,7 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <LinearLayout
+           <LinearLayout
                 android:id="@+id/llClassFour"
                 style="@style/ClassButton"
                 android:layout_width="0dp"
