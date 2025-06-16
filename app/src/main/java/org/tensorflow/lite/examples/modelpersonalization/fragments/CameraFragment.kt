@@ -29,7 +29,7 @@ import androidx.navigation.Navigation
 import org.tensorflow.lite.examples.modelpersonalization.MainViewModel
 import org.tensorflow.lite.examples.modelpersonalization.R
 import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper
-import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper.Companion.CLASS_FOUR
+//import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper.Companion.CLASS_FOUR
 import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper.Companion.CLASS_ONE
 import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper.Companion.CLASS_THREE
 import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper.Companion.CLASS_TWO
@@ -201,13 +201,13 @@ class CameraFragment : Fragment(),
             llClassThree.setOnClickListener {
                 addSampleRequests.add(CLASS_THREE)
             }
-            llClassFour.setOnClickListener {
-                addSampleRequests.add(CLASS_FOUR)
-            }
+           // llClassFour.setOnClickListener {
+             //   addSampleRequests.add(CLASS_FOUR)
+            //}
             llClassOne.setOnTouchListener(onAddSampleTouchListener)
             llClassTwo.setOnTouchListener(onAddSampleTouchListener)
             llClassThree.setOnTouchListener(onAddSampleTouchListener)
-            llClassFour.setOnTouchListener(onAddSampleTouchListener)
+           // llClassFour.setOnTouchListener(onAddSampleTouchListener)
             btnPauseTrain.setOnClickListener {
                 viewModel.setTrainingState(MainViewModel.TrainingState.PAUSE)
                 transferLearningHelper.pauseTraining()
@@ -425,7 +425,7 @@ class CameraFragment : Fragment(),
             CLASS_ONE -> fragmentCameraBinding.llClassOne
             CLASS_TWO -> fragmentCameraBinding.llClassTwo
             CLASS_THREE -> fragmentCameraBinding.llClassThree
-            CLASS_FOUR -> fragmentCameraBinding.llClassFour
+            //CLASS_FOUR -> fragmentCameraBinding.llClassFour
             else -> null
         }
     }
@@ -436,7 +436,7 @@ class CameraFragment : Fragment(),
             CLASS_ONE -> fragmentCameraBinding.tvNumberClassOne
             CLASS_TWO -> fragmentCameraBinding.tvNumberClassTwo
             CLASS_THREE -> fragmentCameraBinding.tvNumberClassThree
-            CLASS_FOUR -> fragmentCameraBinding.tvNumberClassFour
+           // CLASS_FOUR -> fragmentCameraBinding.tvNumberClassFour
             else -> null
         }
     }
@@ -447,7 +447,7 @@ class CameraFragment : Fragment(),
             fragmentCameraBinding.llClassOne.id -> CLASS_ONE
             fragmentCameraBinding.llClassTwo.id -> CLASS_TWO
             fragmentCameraBinding.llClassThree.id -> CLASS_THREE
-            fragmentCameraBinding.llClassFour.id -> CLASS_FOUR
+           // fragmentCameraBinding.llClassFour.id -> CLASS_FOUR
             else -> {
                 ""
             }
@@ -493,11 +493,11 @@ class CameraFragment : Fragment(),
         ) numberOfSamples.getValue(CLASS_THREE)
             .toString()
         else "0"
-        fragmentCameraBinding.tvNumberClassFour.text = if (numberOfSamples
-                .containsKey(CLASS_FOUR)
-        ) numberOfSamples.getValue(CLASS_FOUR)
-            .toString()
-        else "0"
+       // fragmentCameraBinding.tvNumberClassFour.text = if (numberOfSamples
+        //        .containsKey(CLASS_FOUR)
+        //) numberOfSamples.getValue(CLASS_FOUR)
+         //   .toString()
+        //else "0"
     }
 
     private fun updateTrainingButtonState() {
@@ -536,7 +536,7 @@ class CameraFragment : Fragment(),
                 llClassOne.isClickable = enable
                 llClassTwo.isClickable = enable
                 llClassThree.isClickable = enable
-                llClassFour.isClickable = enable
+                //llClassFour.isClickable = enable
             }
         }
     }

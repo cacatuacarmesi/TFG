@@ -209,7 +209,7 @@ class TransferLearningHelper(
 
                 val outputs: MutableMap<String, Any> = HashMap()
                 val output = TensorBuffer.createFixedSize(
-                    intArrayOf(1, 4),
+                    intArrayOf(1, 3),
                     DataType.FLOAT32
                 )
                 outputs[INFERENCE_OUTPUT_KEY] = output.buffer
@@ -265,7 +265,7 @@ class TransferLearningHelper(
 
     // encode the classes name to float array
     private fun encoding(id: Int): FloatArray {
-        val classEncoded = FloatArray(4) { 0f }
+        val classEncoded = FloatArray(3) { 0f }
         classEncoded[id] = 1f
         return classEncoded
     }
@@ -315,12 +315,12 @@ class TransferLearningHelper(
         const val CLASS_ONE = "1"
         const val CLASS_TWO = "2"
         const val CLASS_THREE = "3"
-        const val CLASS_FOUR = "4"
+      //  const val CLASS_FOUR = "4"
         private val classes = mapOf(
             CLASS_ONE to 0,
             CLASS_TWO to 1,
             CLASS_THREE to 2,
-            CLASS_FOUR to 3
+        //    CLASS_FOUR to 3
         )
         private const val LOAD_BOTTLENECK_INPUT_KEY = "feature"
         private const val LOAD_BOTTLENECK_OUTPUT_KEY = "bottleneck"
