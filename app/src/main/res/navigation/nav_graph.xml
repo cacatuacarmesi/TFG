@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/permissions_fragment"
-        android:name="org.tensorflow.lite.examples.modelpersonalization.fragments.PermissionsFragment"
+        android:name="com.example.tfg.fragments.PermissionsFragment"
         android:label="PermissionsFragment">
 
         <action
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/camera_fragment"
-        android:name="org.tensorflow.lite.examples.modelpersonalization.fragments.CameraFragment"
+        android:name="com.example.tfg.fragments.CameraFragment"
         android:label="CameraFragment">
 
         <action

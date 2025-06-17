@@ -1,5 +1,5 @@
 
-package org.tensorflow.lite.examples.modelpersonalization
+package com.example.tfg
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

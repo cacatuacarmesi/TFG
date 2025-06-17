@@ -1,10 +1,10 @@
-package org.tensorflow.lite.examples.modelpersonalization.fragments
+package com.example.tfg.fragments
 
 import android.app.Dialog
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDialogFragment
-import org.tensorflow.lite.examples.modelpersonalization.R
+import com.example.tfg.R
 
 class HelperDialog : AppCompatDialogFragment() {
     companion object {

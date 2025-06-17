@@ -1,5 +1,5 @@
 
-package org.tensorflow.lite.examples.modelpersonalization.fragments
+package com.example.tfg.fragments
 
 import android.app.Dialog
 import android.os.Bundle
@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
-import org.tensorflow.lite.examples.modelpersonalization.MainViewModel
-import org.tensorflow.lite.examples.modelpersonalization.databinding.FragmentSettingBinding
+import com.example.tfg.MainViewModel
+import com.example.tfg.databinding.FragmentSettingBinding
 
 
 class SettingFragment : DialogFragment() {

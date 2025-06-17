@@ -1,14 +1,14 @@
 
-package org.tensorflow.lite.examples.modelpersonalization
+package com.example.tfg
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
-import org.tensorflow.lite.examples.modelpersonalization.databinding.ActivityMainBinding
-import org.tensorflow.lite.examples.modelpersonalization.fragments.HelperDialog
-import org.tensorflow.lite.examples.modelpersonalization.fragments.SettingFragment
+import com.example.tfg.databinding.ActivityMainBinding
+import com.example.tfg.fragments.HelperDialog
+import com.example.tfg.fragments.SettingFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var activityMainBinding: ActivityMainBinding

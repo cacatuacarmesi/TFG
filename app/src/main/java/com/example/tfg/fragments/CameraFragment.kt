@@ -1,4 +1,4 @@
-package org.tensorflow.lite.examples.modelpersonalization.fragments
+package com.example.tfg.fragments
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
@@ -26,14 +26,14 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
-import org.tensorflow.lite.examples.modelpersonalization.MainViewModel
-import org.tensorflow.lite.examples.modelpersonalization.R
-import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper
+import com.example.tfg.MainViewModel
+import com.example.tfg.R
+import com.example.tfg.TransferLearningHelper
 //import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper.Companion.CLASS_FOUR
-import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper.Companion.CLASS_ONE
-import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper.Companion.CLASS_THREE
-import org.tensorflow.lite.examples.modelpersonalization.TransferLearningHelper.Companion.CLASS_TWO
-import org.tensorflow.lite.examples.modelpersonalization.databinding.FragmentCameraBinding
+import com.example.tfg.TransferLearningHelper.Companion.CLASS_ONE
+import com.example.tfg.TransferLearningHelper.Companion.CLASS_THREE
+import com.example.tfg.TransferLearningHelper.Companion.CLASS_TWO
+import com.example.tfg.databinding.FragmentCameraBinding
 import org.tensorflow.lite.support.label.Category
 import java.util.Locale
 import java.util.concurrent.ConcurrentLinkedQueue

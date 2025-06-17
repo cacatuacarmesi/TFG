@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.tensorflow.lite.examples.modelpersonalization">
+    package="com.example.tfg">
 
 
     <!-- Enable instant app support -->
@@ -24,7 +24,7 @@
         tools:ignore="AllowBackup">
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.tfg.MainActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
             android:exported="true"

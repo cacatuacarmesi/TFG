@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace 'org.tensorflow.lite.examples.modelpersonalization'
+    namespace 'com.example.tfg'
     compileSdk 35
 
     defaultConfig {
-        applicationId "org.tensorflow.lite.examples.modelpersonalization"
+        applicationId "com.example.tfg"
         minSdk 23
         targetSdk 35
         versionCode 1
