@@ -103,11 +103,8 @@ class TransferLearningHelper(
         if (interpreter == null) {
             setupModelPersonalization()
         }
-
-        // Create new thread for training process.
         executor = Executors.newSingleThreadExecutor()
         val trainBatchSize = getTrainBatchSize()
-
         if (trainingSamples.size < trainBatchSize) {
             throw RuntimeException(
                 String.format(
@@ -116,20 +113,13 @@ class TransferLearningHelper(
                 )
             )
         }
-
         executor?.execute {
             synchronized(lock) {
                 var avgLoss: Float
-
-                // Keep training until the helper pause or close.
                 while (executor?.isShutdown == false) {
                     var totalLoss = 0f
                     var numBatchesProcessed = 0
-
-                    // Shuffle training samples to reduce overfitting and
-                    // variance.
                     trainingSamples.shuffle()
-
                     trainingBatches(trainBatchSize)
                         .forEach { trainingSamples ->
                             val trainingBatchBottlenecks =
@@ -138,23 +128,18 @@ class TransferLearningHelper(
                                         BOTTLENECK_SIZE
                                     )
                                 }
-
                             val trainingBatchLabels =
                                 MutableList(trainBatchSize) {
                                     FloatArray(
                                         classes.size
                                     )
                                 }
-
-                            // Copy a training sample list into two different
-                            // input training lists.
                             trainingSamples.forEachIndexed { index, trainingSample ->
                                 trainingBatchBottlenecks[index] =
                                     trainingSample.bottleneck
                                 trainingBatchLabels[index] =
                                     trainingSample.label
                             }
-
                             val loss = training(
                                 trainingBatchBottlenecks,
                                 trainingBatchLabels
@@ -162,8 +147,6 @@ class TransferLearningHelper(
                             totalLoss += loss
                             numBatchesProcessed++
                         }
-
-                    // Calculate the average loss after training all batches.
                     avgLoss = totalLoss / numBatchesProcessed
                     handler.post {
                         classifierListener?.onLossResults(avgLoss)
